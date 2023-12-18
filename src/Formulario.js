@@ -21,7 +21,7 @@ const handleCadastroFormulario = (event) => {
          profissao,
          termos:aceitaTermos,       
         })
-        console.log("Resposta da Api".formToJSON(response.data))
+        console.log("Resposta da Api", formToJSON(response.data))
     } catch  {
         console.error("ERROR AO FAZER SOLICITAÇÃO")
     }
@@ -95,7 +95,7 @@ return (
             id ="aceitaTermos"
             checked={aceitaTermos}
             onChange={()=>SetaceitaTermos(!aceitaTermos)}/>
-            <lapel>Eu aceito os termos e condições de serviço</lapel>
+            <label>Eu aceito os termos e condições de serviço</label>
         </div>
         <button submit="handleCadastroFormulario">Enviar</button>
      </form>
